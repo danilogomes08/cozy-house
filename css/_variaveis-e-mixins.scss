@@ -1,0 +1,30 @@
+$rosa: #eccfbb;
+$branco: #fafafa;
+$cinza-claro: #f6f6f6;
+$cinza-escuro: #545454;
+
+$font-1: 'Crimson Text', serif;
+$font-2: 'Tahoma';
+
+@mixin titulo($size) {
+    font-size: $size + rem;
+    font-family: $font-1;
+}
+
+@mixin texto-simples($size) {
+    font-size: $size + rem;
+    font-family: $font-2;
+}
+
+@mixin container {
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@mixin device($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}

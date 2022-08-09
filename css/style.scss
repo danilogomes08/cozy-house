@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+@import 'variaveis-e-mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding-top: 30px;
+    background-image: url('../imagens/background-header.png');
+    background-size: cover;  
+    background-repeat: no-repeat;
+    @include device(1000px) {
+        padding: 0 30px;
+    }
+}
+
+.header {
+    @include container;
+    justify-content: space-between;
+    align-items: center;
+    p:first-child {
+        color:$rosa;
+        @include titulo(2);
+    } p:last-child {
+        @include texto-simples(1);
+        color: $branco
+    }
+    @include device(1000px) {
+        margin: 0 30px;
+        padding-top: 30px;
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        li {
+            display: inline-block;
+            margin-left: 25px;
+            border: 2px solid transparent;
+            padding-bottom: 2px;
+            transition: .5s ease-in-out;
+            &:hover {
+                border-bottom: 2px solid $rosa;
+            }   
+        } a {
+            @include texto-simples(1);
+            color: $branco;
+        } 
+    }
+}
+
+.intro {
+    display: flex;
+    @include container;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    img {
+        max-width: 40%;
+        height: auto;
+        @include device(750px) {
+            max-width: 60%;
+        }
+    }
+    h1 {
+        @include titulo(3);
+        color: $branco;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+    p {
+        @include texto-simples(0.95);
+        color: $branco;
+        margin-bottom: 40px;
+    }
+    a {
+        @include titulo(1);
+        padding: 10px 40px;
+        background-color: $rosa;
+        color: $cinza-escuro;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: all .5s ease-in-out;
+        display: inline-block;
+        @include device(750px) {
+            margin-bottom: 30px;
+        }
+        &:hover {
+            transform: scale(1.2); 
+        }
+    }
+    @include device(750px) {
+        flex-direction: column;
+    }
+} 

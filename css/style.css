@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding-top: 30px;
+  background-image: url("../imagens/background-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 0 30px;
+  }
+}
+
+.header {
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header p:first-child {
+  color: #eccfbb;
+  font-size: 2rem;
+  font-family: "Crimson Text", serif;
+}
+.header p:last-child {
+  font-size: 1rem;
+  font-family: "Tahoma";
+  color: #fafafa;
+}
+@media screen and (max-width: 1000px) {
+  .header {
+    margin: 0 30px;
+    padding-top: 30px;
+  }
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+  border: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: 0.5s ease-in-out;
+}
+nav ul li:hover {
+  border-bottom: 2px solid #eccfbb;
+}
+nav ul a {
+  font-size: 1rem;
+  font-family: "Tahoma";
+  color: #fafafa;
+}
+
+.intro {
+  display: flex;
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.intro img {
+  max-width: 40%;
+  height: auto;
+}
+@media screen and (max-width: 750px) {
+  .intro img {
+    max-width: 60%;
+  }
+}
+.intro h1 {
+  font-size: 3rem;
+  font-family: "Crimson Text", serif;
+  color: #fafafa;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.intro p {
+  font-size: 0.95rem;
+  font-family: "Tahoma";
+  color: #fafafa;
+  margin-bottom: 40px;
+}
+.intro a {
+  font-size: 1rem;
+  font-family: "Crimson Text", serif;
+  padding: 10px 40px;
+  background-color: #eccfbb;
+  color: #545454;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+}
+@media screen and (max-width: 750px) {
+  .intro a {
+    margin-bottom: 30px;
+  }
+}
+.intro a:hover {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 750px) {
+  .intro {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
