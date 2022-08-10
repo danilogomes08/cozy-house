@@ -6,14 +6,16 @@ $cinza-escuro: #545454;
 $font-1: 'Crimson Text', serif;
 $font-2: 'Tahoma';
 
-@mixin titulo($size) {
+@mixin titulo($size, $color) {
     font-size: $size + rem;
     font-family: $font-1;
+    color: $color;
 }
 
-@mixin texto-simples($size) {
+@mixin texto-simples($size, $color) {
     font-size: $size + rem;
     font-family: $font-2;
+    color: $color;
 }
 
 @mixin container {

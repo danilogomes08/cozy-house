@@ -39,9 +39,9 @@ header {
   align-items: center;
 }
 .header p:first-child {
-  color: #eccfbb;
   font-size: 2rem;
   font-family: "Crimson Text", serif;
+  color: #eccfbb;
 }
 .header p:last-child {
   font-size: 1rem;
@@ -87,6 +87,7 @@ nav ul a {
 .intro img {
   max-width: 40%;
   height: auto;
+  margin: 0 auto;
 }
 @media screen and (max-width: 750px) {
   .intro img {
@@ -109,9 +110,9 @@ nav ul a {
 .intro a {
   font-size: 1rem;
   font-family: "Crimson Text", serif;
+  color: #545454;
   padding: 10px 40px;
   background-color: #eccfbb;
-  color: #545454;
   border-radius: 30px;
   font-weight: bold;
   transition: all 0.5s ease-in-out;
@@ -128,5 +129,62 @@ nav ul a {
 @media screen and (max-width: 750px) {
   .intro {
     flex-direction: column;
+    text-align: center;
   }
+}
+
+.about {
+  background-color: #fafafa;
+  padding: 100px 0;
+}
+@media screen and (max-width: 1000px) {
+  .about {
+    padding: 30px;
+  }
+}
+.about > div {
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 750px) {
+  .about > div {
+    flex-direction: column-reverse;
+  }
+}
+.about > div img {
+  max-width: 55%;
+}
+@media screen and (max-width: 750px) {
+  .about > div img {
+    max-width: 80%;
+  }
+}
+.about > div .text-about {
+  max-width: 40%;
+}
+@media screen and (max-width: 750px) {
+  .about > div .text-about {
+    max-width: 80%;
+  }
+}
+.about h2 {
+  font-size: 2rem;
+  font-family: "Crimson Text", serif;
+  color: #545454;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+@media screen and (max-width: 750px) {
+  .about h2 {
+    text-align: center;
+  }
+}
+.about p {
+  font-size: 0.95rem;
+  font-family: "Tahoma";
+  color: #545454;
 }/*# sourceMappingURL=style.css.map */

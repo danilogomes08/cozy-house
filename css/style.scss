@@ -36,11 +36,9 @@ header {
     justify-content: space-between;
     align-items: center;
     p:first-child {
-        color:$rosa;
-        @include titulo(2);
+        @include titulo(2, $rosa);
     } p:last-child {
-        @include texto-simples(1);
-        color: $branco
+        @include texto-simples(1, $branco);
     }
     @include device(1000px) {
         margin: 0 30px;
@@ -61,8 +59,7 @@ nav {
                 border-bottom: 2px solid $rosa;
             }   
         } a {
-            @include texto-simples(1);
-            color: $branco;
+            @include texto-simples(1, $branco);
         } 
     }
 }
@@ -76,26 +73,24 @@ nav {
     img {
         max-width: 40%;
         height: auto;
+        margin: 0 auto;
         @include device(750px) {
             max-width: 60%;
         }
     }
     h1 {
-        @include titulo(3);
-        color: $branco;
+        @include titulo(3, $branco);
         font-weight: normal;
         margin-bottom: 20px;
     }
     p {
-        @include texto-simples(0.95);
-        color: $branco;
+        @include texto-simples(0.95, $branco);
         margin-bottom: 40px;
     }
     a {
-        @include titulo(1);
+        @include titulo(1, $cinza-escuro);
         padding: 10px 40px;
         background-color: $rosa;
-        color: $cinza-escuro;
         border-radius: 30px;
         font-weight: bold;
         transition: all .5s ease-in-out;
@@ -109,5 +104,45 @@ nav {
     }
     @include device(750px) {
         flex-direction: column;
+        text-align: center;
     }
+} 
+
+// about
+
+.about {
+    background-color: $branco;
+    padding: 100px 0;
+    @include device(1000px) {
+        padding: 30px;
+    }
+    & > div {
+        @include container;
+        align-items: center;
+        justify-content: space-between;
+        @include device(750px) {
+            flex-direction:column-reverse;
+        }
+        img {
+            max-width: 55%;
+            @include device(750px) {
+                max-width: 80%;
+            }
+        }
+        .text-about {
+            max-width: 40%;
+            @include device(750px) {
+                max-width: 80%;
+            }
+        }
+    } h2 {
+        @include titulo(2, $cinza-escuro);
+        margin-bottom: 20px;
+        font-weight: normal;
+        @include device(750px) {
+            text-align: center;
+        }
+    } p {
+        @include texto-simples(0.95, $cinza-escuro);
+    } 
 } 
