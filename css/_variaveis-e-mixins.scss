@@ -22,7 +22,6 @@ $font-2: 'Tahoma';
     max-width: 1000px;
     display: flex;
     margin: 0 auto;
-    flex-wrap: wrap;
 }
 
 @mixin device($size) {
