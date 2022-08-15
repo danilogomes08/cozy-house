@@ -256,7 +256,6 @@ main {
 .donations {
    background-color: $cinza-claro;
    padding: 50px 0;
-
    > div {
     @include container;
     align-items: center;
@@ -267,17 +266,24 @@ main {
        }
    } .text-donations {
     @include device(820px) {
-        max-width: 60%;
+        max-width: 70%;
+        text-align: center;
     }
    }
    img {
     max-width: 60%;
     height: auto;
+    @include device(820px) {
+        max-width: 80%;
+    }
    }
    h2 {
     @include titulo(2, $cinza-escuro);
     font-weight: normal;
     margin-bottom: 20px;
+    @include device(820px) {
+        text-align: center;
+    }
    }
    p {
     @include titulo(1.15, $cinza-escuro);
@@ -298,6 +304,10 @@ main {
     padding: 10px 20px;
     border-radius: 10px;
     width: 300px;
+    @include device(820px) {
+        margin: 20px auto;
+        color: $cinza-escuro !important        
+    }
    }
 }
 
@@ -330,6 +340,9 @@ footer {
         p {
             @include titulo(1, $rosa); 
             margin-bottom: 20px;
+            @include device(820px) {
+                color: $rosa !important;
+            }
 
         }
         .address p, .contact p {
@@ -351,5 +364,65 @@ footer {
     }
     img {
         max-width: 35%;
+        @include device(820px) {}
+        max-width: 50%
     }
+}
+
+// hamburger
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: $cinza-escuro;
+        width: 50%;
+        padding: 30px 20px;
+        text-align: right;
+        transition: all .7s ease-in-out;
+            .nav-item, .nav-item:hover {
+                border: none;
+            }
+    }
+
+    .nav-menu.active {
+        left: 50%;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
 }
