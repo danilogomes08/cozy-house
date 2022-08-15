@@ -341,7 +341,8 @@ footer {
             @include titulo(1, $rosa); 
             margin-bottom: 20px;
             @include device(820px) {
-                color: $rosa !important;
+                color: $rosa;
+                text-decoration: none !important;
             }
         }
         .address p, .contact p {

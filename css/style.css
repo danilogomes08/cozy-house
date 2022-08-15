@@ -428,7 +428,8 @@ footer > div p {
 }
 @media screen and (max-width: 820px) {
   footer > div p {
-    color: #eccfbb !important;
+    color: #eccfbb;
+    text-decoration: none !important;
   }
 }
 footer > div .address p, footer > div .contact p {
