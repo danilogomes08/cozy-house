@@ -306,7 +306,8 @@ main {
     width: 300px;
     @include device(820px) {
         margin: 20px auto;
-        color: $cinza-escuro !important        
+        color: $cinza-escuro !important;
+        text-decoration: none;
     }
    }
 }
@@ -342,8 +343,8 @@ footer {
             margin-bottom: 20px;
             @include device(820px) {
                 color: $rosa !important;
+                text-decoration: none;
             }
-
         }
         .address p, .contact p {
             display: flex;
@@ -382,7 +383,7 @@ footer {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: $rosa;
 }
 
 @media only screen and (max-width: 768px) {
