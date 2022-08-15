@@ -267,7 +267,7 @@ main {
        }
    } .text-donations {
     @include device(820px) {
-        max-width: 80%;
+        max-width: 60%;
     }
    }
    img {
@@ -299,4 +299,57 @@ main {
     border-radius: 10px;
     width: 300px;
    }
+}
+
+// footer
+
+footer {
+    background: url('../imagens/background-footer2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    align-items: center;
+    > div {
+    @include container;
+    justify-content: space-between;
+    align-items: center;
+    @include device(1030px) {
+        padding: 0 20px;
+    }
+    @include device(820px) {
+        flex-direction: column
+    }
+        h2 {
+            @include titulo(2, $branco);  
+            font-weight: normal;
+            margin-bottom: 20px;
+            @include device(820px) {
+                text-align: center;
+            }          
+        }
+        p {
+            @include titulo(1, $rosa); 
+            margin-bottom: 20px;
+
+        }
+        .address p, .contact p {
+            display: flex;
+            align-items: center;
+        }
+        .address p::before {
+            content: url('../imagens/icon13.png');
+            margin-right: 20px;
+        }
+        .contact p:nth-child(2)::before {
+            content: url('../imagens/icon12.png');
+            margin-right: 20px;
+        }
+        .contact p:nth-child(3)::before {
+            content: url('../imagens/icon11.png');
+            margin-right: 20px;
+        }
+    }
+    img {
+        max-width: 35%;
+    }
 }
