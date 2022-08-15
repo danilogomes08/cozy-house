@@ -307,7 +307,6 @@ main {
     @include device(820px) {
         margin: 20px auto;
         color: $cinza-escuro !important;
-        text-decoration: none;
     }
    }
 }
@@ -343,7 +342,6 @@ footer {
             margin-bottom: 20px;
             @include device(820px) {
                 color: $rosa !important;
-                text-decoration: none;
             }
         }
         .address p, .contact p {
