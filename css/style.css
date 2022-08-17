@@ -21,7 +21,7 @@ img {
 
 header {
   padding-top: 30px;
-  background-image: url("../imagens/background-header.png");
+  background-image: url("../imagens/background-header.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -366,7 +366,7 @@ main > a:hover {
   font-style: italic;
 }
 .donations .credcard::before {
-  content: url("../imagens/icon10.png");
+  content: url("../imagens/icon10.webp");
   margin-right: 20px;
 }
 .donations .credcard {
@@ -387,7 +387,7 @@ main > a:hover {
 }
 
 footer {
-  background: url("../imagens/background-footer2.png");
+  background: url("../imagens/background-footer2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 50px;
@@ -439,15 +439,15 @@ footer > div .address p, footer > div .contact p {
   align-items: center;
 }
 footer > div .address p::before {
-  content: url("../imagens/icon13.png");
+  content: url("../imagens/icon13.webp");
   margin-right: 20px;
 }
 footer > div .contact p:nth-child(2)::before {
-  content: url("../imagens/icon12.png");
+  content: url("../imagens/icon12.webp");
   margin-right: 20px;
 }
 footer > div .contact p:nth-child(3)::before {
-  content: url("../imagens/icon11.png");
+  content: url("../imagens/icon11.webp");
   margin-right: 20px;
 }
 footer img {
