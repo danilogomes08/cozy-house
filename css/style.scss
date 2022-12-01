@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 li {
@@ -28,7 +29,7 @@ header {
     background-size: cover;  
     background-repeat: no-repeat;
     @include device(1000px) {
-        padding: 0 30px;
+        padding: 0;
     }
 }
 
@@ -42,8 +43,7 @@ header {
         @include texto-simples(1, $branco);
     }
     @include device(1000px) {
-        margin: 0 30px;
-        padding-top: 30px;
+       padding: 20px 0;
     }
 }
 
@@ -105,6 +105,7 @@ nav {
     @include device(750px) {
         flex-direction: column;
         text-align: center;
+        margin-top: 150px;
     }
 } 
 
@@ -388,15 +389,23 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    .header {
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        background-color: $cinza-escuro;
+        width: 100%;
+    }
     .nav-menu {
-        position: absolute;
+        position: fixed;
         left: -100%;
-        top: 5rem;
+        top: 100px;
         flex-direction: column;
         background-color: $cinza-escuro;
-        width: 50%;
-        padding: 30px 20px;
-        text-align: right;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        text-align: center;
         transition: all .7s ease-in-out;
             .nav-item, .nav-item:hover {
                 border: none;
@@ -404,11 +413,15 @@ footer {
     }
 
     .nav-menu.active {
-        left: 50%;
+        left: 0
     }
 
-    .nav-item {
-        margin: 10px 0;
+        .nav-item {
+            margin: 20px 0;
+        }
+
+    .nav-item a {
+        font-size: 1.5rem;
     }
 
     .hamburger {
